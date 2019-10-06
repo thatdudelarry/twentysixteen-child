@@ -16,6 +16,35 @@
 			// Include the single post content template.
 			get_template_part( 'template-parts/content', 'single' );
 
+			?>
+				<h3>Other Articles You May Enjoy</h3>
+
+				<section class="recommended">
+					<?php
+						$args = array(
+							'numberposts' => 4,
+							'offset' => 0,
+							'orderby' => 'post_date',
+							'order' => 'DESC',
+							'post_type' => 'post',
+							'post_status' => 'publish',
+							'suppress_filters' => true
+						);
+
+						$recent_posts = wp_get_recent_posts($args);
+						foreach( $recent_posts as $recent ){
+							?>
+								<article class="single">
+									<a href="<?php get_permalink($recent["ID"]);?>"><?php echo $recent["post_title"];?></a>
+								</article>
+							<?php
+						}
+						wp_reset_query();
+					?>
+				</section>
+
+			<?php
+
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) {
 				comments_template();

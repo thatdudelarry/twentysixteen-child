@@ -16,6 +16,9 @@ function amply_scripts() {
 	// Add Font Awesome
 	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/5accbece9b.js', array(), '4.7.0' );
 
+	// Add Custom JS
+	wp_enqueue_script( 'amply-js', get_stylesheet_directory_uri() . '/js/amply.js', array(), '0.0.1', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'amply_scripts' );
 
