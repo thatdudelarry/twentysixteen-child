@@ -1,0 +1,59 @@
+$imgm: rgba($pinkA400, 0.5);
+$imgc: rgba($cyanA400, 0.5);
+$imgy: rgba($yellowA400, 0.5);
+
+.wp-block-image {
+	.alignleft img {
+		box-shadow:
+			-5px -5px 0 0 $imgm,
+			-10px 0px 0 0 $imgc,
+			-5px 5px 0 0 $imgy;
+	}
+	.alignright img {
+		box-shadow:
+			5px -5px 0 0 $imgm,
+			10px 0px 0 0 $imgc,
+			5px 5px 0 0 $imgy;
+	}
+	.aligncenter img {
+		box-shadow:
+			-5px 5px 0 0 $imgm,
+			0px 10px 0 0 $imgc,
+			5px 5px 0 0 $imgy;
+	}
+	& > img {
+		box-shadow:
+			-5px 5px 0 0 $imgm,
+			0px 10px 0 0 $imgc,
+			5px 5px 0 0 $imgy;
+	}
+}
+// 	background-color: #21D4FD;
+// 	background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+// 	border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+// 	box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+// 	animation: morphing 10s infinite;
+// 	overflow: hidden;
+	
+// 	&:hover {
+// 		animation-play-state: paused;
+// 	}
+
+// 	@keyframes morphing {
+// 		0% {
+// 			border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+// 			box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+// 		}
+// 		25% { 
+// 			border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+// 		}
+// 		50% {
+// 			border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+// 			box-shadow: -10px -5px 50px rgba(0,0,0,0.2);
+// 		}
+// 		75% {
+// 			border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+// 		}
+// 	}
+
+// }

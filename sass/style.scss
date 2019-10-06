@@ -1,0 +1,25 @@
+/*
+ Theme Name:   Twenty Sixteen Child
+ Theme URI:    http://example.com/twenty-sixteen-child/
+ Description:  Twenty Sixteen Child Theme
+ Author:       Justin
+ Author URI:   https://github.com/thatdudelarry/twentysixteen-child
+ Template:     twentysixteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  twentysixteenchild
+*/
+@charset "UTF-8";
+
+// Functions & Settings
+@import 'components/functions';
+@import 'components/settings';
+
+// Elements
+@import 'components/layout';
+@import 'components/type';
+@import 'components/lists';
+@import 'components/images';
+@import 'components/buttons';
+

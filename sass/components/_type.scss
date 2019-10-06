@@ -1,0 +1,79 @@
+body {
+	font-family: $font-regular;
+	font-size: 1rem;
+	font-weight: 300;
+	letter-spacing: 0.0125rem;
+	line-height: 1.7em;
+	position: relative;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-large;
+	line-height: 1em;
+	a {
+		text-decoration: none;
+	}
+}
+h1 {
+	font-size: 6rem;
+	letter-spacing: -0.015625rem;
+}
+h2 {
+	font-size: 3.75rem;
+	letter-spacing: -0.008333333333333rem;
+}
+h3 {
+	font-size: 3rem;
+}
+h4 {
+	font-size: 2.125rem;
+	font-weight: 300;
+	letter-spacing: 0.007352941176471rem;
+}
+h5 {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+h6 {
+	font-size: 1.25rem;
+	font-weight: 300;
+	letter-spacing: 0.0075rem;
+}
+.lede {
+	font-size: 1.25rem;
+	line-height: 1.8em;
+}
+.button {
+	font-family: $font-large;
+	font-size: 0.875rem;
+	letter-spacing: 0.089285714285714rem;
+	text-transform: uppercase;
+}
+figcaption,
+.caption {
+	font-family: $font-large;
+	font-weight: 300;
+	font-size: 0.75rem;
+	font-style: normal !important;
+	letter-spacing: 0.033333333333333rem;
+}
+.entry-footer {
+	font-family: $font-large;
+	.fas {
+		color: $gray500;
+	}
+}
+a {
+	color: $blue500;
+	&:active,
+	&:hover,
+	&:focus {
+		color: scale-color( $blue500, $lightness: -50% );
+	}
+	&:visited {
+		color: $purple500;
+	}
+}
+
+.entry-title a {
+	color: $red500;
+}

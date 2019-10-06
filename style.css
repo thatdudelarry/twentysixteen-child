@@ -1,0 +1,126 @@
+/*
+ Theme Name:   Twenty Sixteen Child
+ Theme URI:    http://example.com/twenty-sixteen-child/
+ Description:  Twenty Sixteen Child Theme
+ Author:       Justin
+ Author URI:   https://github.com/thatdudelarry/twentysixteen-child
+ Template:     twentysixteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  twentysixteenchild
+*/
+#content {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+body {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.0125rem;
+  line-height: 1.7em;
+  position: relative; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  line-height: 1em; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    text-decoration: none; }
+
+h1 {
+  font-size: 6rem;
+  letter-spacing: -0.015625rem; }
+
+h2 {
+  font-size: 3.75rem;
+  letter-spacing: -0.008333333333333rem; }
+
+h3 {
+  font-size: 3rem; }
+
+h4 {
+  font-size: 2.125rem;
+  font-weight: 300;
+  letter-spacing: 0.007352941176471rem; }
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 300; }
+
+h6 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.0075rem; }
+
+.lede {
+  font-size: 1.25rem;
+  line-height: 1.8em; }
+
+.button {
+  font-family: "Oswald", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.089285714285714rem;
+  text-transform: uppercase; }
+
+figcaption,
+.caption {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  font-style: normal !important;
+  letter-spacing: 0.033333333333333rem; }
+
+.entry-footer {
+  font-family: "Oswald", sans-serif; }
+  .entry-footer .fas {
+    color: #9E9E9E; }
+
+a {
+  color: #2196F3; }
+  a:active, a:hover, a:focus {
+    color: #074c83; }
+  a:visited {
+    color: #9C27B0; }
+
+.entry-title a {
+  color: #F44336; }
+
+ul {
+  list-style-type: circle; }
+
+dl dt {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 1em auto 0.5em; }
+dl dd {
+  font-size: 0.75rem;
+  margin: 0;
+  padding-left: 1em; }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  nav ul li {
+    display: inline-block; }
+    nav ul li a {
+      display: block; }
+
+.wp-block-image .alignleft img {
+  box-shadow: -5px -5px 0 0 rgba(245, 0, 87, 0.5), -10px 0px 0 0 rgba(0, 229, 255, 0.5), -5px 5px 0 0 rgba(255, 234, 0, 0.5); }
+.wp-block-image .alignright img {
+  box-shadow: 5px -5px 0 0 rgba(245, 0, 87, 0.5), 10px 0px 0 0 rgba(0, 229, 255, 0.5), 5px 5px 0 0 rgba(255, 234, 0, 0.5); }
+.wp-block-image .aligncenter img {
+  box-shadow: -5px 5px 0 0 rgba(245, 0, 87, 0.5), 0px 10px 0 0 rgba(0, 229, 255, 0.5), 5px 5px 0 0 rgba(255, 234, 0, 0.5); }
+.wp-block-image > img {
+  box-shadow: -5px 5px 0 0 rgba(245, 0, 87, 0.5), 0px 10px 0 0 rgba(0, 229, 255, 0.5), 5px 5px 0 0 rgba(255, 234, 0, 0.5); }
+
+.wp-block-button.is-style-squared .wp-block-button__link {
+  box-shadow: 0px 0px 5px rgba(33, 150, 243, 0.5);
+  animation: 5s squarebutton infinite; }
+@keyframes squarebutton {
+  50% {
+    box-shadow: 0px 0px 25px rgba(33, 150, 243, 0.125); } }
+
+/*# sourceMappingURL=style.css.map */
