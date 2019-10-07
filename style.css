@@ -10,9 +10,69 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  twentysixteenchild
 */
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+#page {
+  position: relative; }
+
+.site-inner {
+  display: flex;
+  flex-flow: column nowrap; }
+
 #content {
-  max-width: 1200px;
   margin: 0 auto; }
+
+.entry-header {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.entry-content {
+  padding: 0 10%; }
+  .entry-content p, .entry-content ul {
+    max-width: 640px;
+    font-size: 1.125rem;
+    line-height: 2.1;
+    margin-left: auto;
+    margin-right: auto; }
+
+.entry-footer {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.875rem; }
+  .entry-footer .entry-footer-row {
+    display: flex;
+    justify-content: space-between; }
+    .entry-footer .entry-footer-row > span {
+      display: block; }
+  .entry-footer a {
+    text-decoration: none;
+    color: #616161; }
+    .entry-footer a:visited {
+      color: #616161; }
+    .entry-footer a:active, .entry-footer a:focus, .entry-footer a:hover {
+      color: #E0E0E0; }
+  .entry-footer time.updated {
+    display: inline-block;
+    margin-left: 10px; }
+    .entry-footer time.updated:before {
+      content: '\f4ff';
+      display: inline-block;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      color: #9E9E9E; }
+
+.nav-links {
+  display: flex;
+  justify-content: space-between; }
 
 body {
   font-family: "Merriweather", serif;
@@ -103,18 +163,17 @@ nav ul {
   margin: 0;
   padding: 0; }
   nav ul li {
-    display: inline-block; }
+    display: block; }
     nav ul li a {
-      display: block; }
+      display: inline-block;
+      vertical-align: baseline; }
 
-.wp-block-image .alignleft img {
-  box-shadow: -5px -5px 0 0 rgba(245, 0, 87, 0.5), -10px 0px 0 0 rgba(0, 229, 255, 0.5), -5px 5px 0 0 rgba(255, 234, 0, 0.5); }
-.wp-block-image .alignright img {
-  box-shadow: 5px -5px 0 0 rgba(245, 0, 87, 0.5), 10px 0px 0 0 rgba(0, 229, 255, 0.5), 5px 5px 0 0 rgba(255, 234, 0, 0.5); }
+.wp-block-image .alignleft img,
+.wp-block-image .alignright img,
 .wp-block-image .aligncenter img {
-  box-shadow: -5px 5px 0 0 rgba(245, 0, 87, 0.5), 0px 10px 0 0 rgba(0, 229, 255, 0.5), 5px 5px 0 0 rgba(255, 234, 0, 0.5); }
+  border: 15px solid #FFEB3B; }
 .wp-block-image > img {
-  box-shadow: -5px 5px 0 0 rgba(245, 0, 87, 0.5), 0px 10px 0 0 rgba(0, 229, 255, 0.5), 5px 5px 0 0 rgba(255, 234, 0, 0.5); }
+  border: 15px solid #FFEB3B; }
 
 .wp-block-button.is-style-squared .wp-block-button__link {
   box-shadow: 0px 0px 5px rgba(33, 150, 243, 0.5);
@@ -122,5 +181,67 @@ nav ul {
 @keyframes squarebutton {
   50% {
     box-shadow: 0px 0px 25px rgba(33, 150, 243, 0.125); } }
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  display: block;
+  padding: 10px 8px;
+  font-size: 12px;
+  line-height: 1;
+  background-color: #F44336;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .skip-link:active, .skip-link:focus, .skip-link:hover {
+    color: #ffffff;
+    background-color: #D32F2F;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
+
+#masthead {
+  background-color: #FFEB3B; }
+
+.site-header-main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 10%; }
+  .site-header-main .site-branding .site-title {
+    font-size: 5em;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    text-transform: lowercase;
+    font-weight: 900; }
+    .site-header-main .site-branding .site-title a {
+      color: #ffffff;
+      text-shadow: 3px 3px 0 #F44336;
+      text-decoration: none; }
+  .site-header-main .site-branding .site-description {
+    display: none; }
+  .site-header-main #menu-toggle {
+    display: none; }
+  .site-header-main .site-header-menu {
+    font-family: "Oswald", sans-serif; }
+    .site-header-main .site-header-menu .primary-menu {
+      display: flex;
+      justify-content: flex-end; }
+      .site-header-main .site-header-menu .primary-menu .menu-item a {
+        padding: 15px 10px; }
+      .site-header-main .site-header-menu .primary-menu .menu-item .sub-menu {
+        display: none; }
+      .site-header-main .site-header-menu .primary-menu .dropdown-toggle {
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: baseline; }
 
 /*# sourceMappingURL=style.css.map */

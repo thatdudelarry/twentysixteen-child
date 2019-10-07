@@ -51,13 +51,36 @@ function twentysixteen_entry_date() {
 			esc_url( get_permalink() ),
 			$time_string
 		);
+}
+/**
+ * Override the default twentysixteen_entry_taxonomies function to include icons
+ */
+function twentysixteen_entry_taxonomies() {
+	$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentysixteen' ) );
+	if ( $categories_list && twentysixteen_categorized_blog() ) {
+		printf(
+			'<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+			_x( '<i class="fas fa-folder"></i>', 'Used before category names.', 'twentysixteen' ),
+			$categories_list
+		);
 	}
+
+	$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'twentysixteen' ) );
+	if ( $tags_list && ! is_wp_error( $tags_list ) ) {
+		printf(
+			'<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+			_x( '<i class="fas fa-tags"></i>', 'Used before tag names.', 'twentysixteen' ),
+			$tags_list
+		);
+	}
+}
 
 /**
  * Override the default twentysixteen_entry_meta function to include the smiley face icon
  */
 function twentysixteen_entry_meta() {
 	if ( 'post' === get_post_type() ) {
+		echo "<div class='entry-footer-row'>";
 		printf(
 			'<span class="byline"><span class="author vcard"><span class="screen-reader-text">%1$s </span> <a class="url fn n" href="%2$s">%3$s</a></span></span>',
 			_x( '<i class="fas fa-smile"></i>', 'Used before post author name.', 'twentysixteen' ),
@@ -83,11 +106,21 @@ function twentysixteen_entry_meta() {
 	if ( 'post' === get_post_type() ) {
 		twentysixteen_entry_taxonomies();
 	}
-
+	echo "</div><div class='entry-footer-row'>";
 	if ( ! is_singular() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
+		echo '<span class="comments-link"><i class="fas fa-comments"></i> ';
 		comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) );
 		echo '</span>';
 	}
+	edit_post_link(
+		sprintf(
+			/* translators: %s: Name of current post */
+			__( '<i class="fas fa-edit"></i><span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+			get_the_title()
+		),
+		'<span class="edit-link">',
+		'</span>'
+	);
+	echo "</div>";
 }
 

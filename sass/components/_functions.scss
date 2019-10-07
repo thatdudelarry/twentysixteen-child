@@ -10,7 +10,7 @@ $rem-base: 16px !default;
 @mixin clearfix {
   &::before,
   &::after {
-    content: "\0020";
+    content: " ";
     display: table;
   }
   &::after {

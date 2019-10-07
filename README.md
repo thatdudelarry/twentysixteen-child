@@ -4,9 +4,14 @@
 
 I'm going to continually build on this. Like, forever. 
 
+### Initial Requests
+
+*1. Create a properly structured child theme based on the Twenty Sixteen theme from Automattic.*
+> Started with style.css and functions.php
 ___
+
 *2. Include Font Awesome 4 by including this external stylesheet: https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css*
-> Including the sheet wouldn't actually include the Font Awesome library (only the CSS directives) so I used the script that the Font Awesome website provided.
+> Including the sheet didn't actually include the Font Awesome library (only the CSS directives) so I used the script that the Font Awesome website provided.
 ___
 
 *3. Using WordPress hooks, actions, and/or filters, add the “fa-icon” Font Awesome icon before the author is displayed and add the “fa-calendar” Font Awesome icon before the publication date is displayed.*
@@ -18,11 +23,11 @@ ___
 ___
 
 *5. Apply a decorative border to images within posts.*
-> Did a simple CMYK style offset. Amply provides information, it only makes sense that there would be callbacks to traditional printing.
+> I went with a simple yellow border, because Chiefs.
 ___
 
 *6. Change the color of the post titles.*
-> I made them red.
+> I made them red. Chiefs.
 ___
 
 *7. Modify unordered lists to use the "circle" bullet style.*
@@ -40,3 +45,6 @@ ___
 *10. Include a custom post template called "Post With Recommendations". It can look like the standard post template, but below the post it should include a heading of "Other Articles You May Enjoy" as well as links to the 4 most recent posts to the site. Be sure and provide some styling to that recommendations area as well. The template should be created in a way that allows writers to select your template from the "Template" dropdown in the "Post Attributes" section of the WordPress editor.*
 > Made the post template and applied it to the "Hello, World." post.
 
+### Additional Edits
+
+I haven't been able to dive into a fun little project like this in quite some time. It really reminded me of how much I enjoy *creating* themes. 
